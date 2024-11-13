@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>My Portfolio</title>
+    <style>
+         body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f5f5f5; /* Light grey color */
+            color: #363636; /* Dark grey color */
+            
+        }
+        .tabs li.is-active a {
+            border-bottom-color: #363636; /* Dark grey color */
+            color: #363636; /* Dark grey color */
+        }
+        #contact {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            height: 70vh;
+        }
+        .hero.is-info.is-bold {
+            background-color: #209cee; /* is-info color in Bulma */
+        }
+        .footer {
+            background-color: #209cee; /* is-info color in Bulma */
+}
+
+        
+         .contact-info-container, .project-info-container {
+    border: 2px solid #209cee; /* Border color */
+    padding: 20px; /* Increase padding */
+    border-radius: 15px; /* Semi-rounded corners */
+    background-color: #f5f5f5; /* Change background color to light grey */
+    color: #209cee; /* Change text color to is-info color */
+    margin: 10px 0;
+    text-align: center;
+}
+#github1, #demo1 {
+    margin: 1rem ;
+
+}
+.card a {
+    background-color: #75bdec;
+    border-color: azure;
+    border: 1rem;
+}
+.card {
+    border-style: inset;
+    border-color: #a1ceec;
+}
+a {
+    color: #276691;
+}
+#ppic {
+    float: left;
+}
+.footext {
+    z-index: 10;
+}
+    </style>
+</head>
+<body>
+    <section class="hero is-info is-bold">
+        <div class="hero-body">
+            <div class="container">
+                <figure class="image is-128x128">
+                    <img class="is-rounded"  src="./assets/profile-pic.jpg" alt="profile picture" id="ppic">
+                </figure>
+                <h1 class="title">Hello, I'm <b>Sophia Hassan</b> <br>
+                    Welcome to My Portfolio</h1>
+                <h2 class="subtitle">A Computer Science student with a passion for web development</h2>
+                <div class="block">
+                    <button class="button is-info is-inverted is-focused  is-rounded is-hoverd"
+                      onclick="window.open('./assets/resume-example.pdf')" id="cv"> Download CV  </button>
+                 
+                    <button class="button is-info is-inverted is-focused  is-rounded is-hoverd"
+                      onclick="location.href='#contact'"> contact me</button>
+                  
+            </div>
+            </div>
+          
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h1 class="title">About Me</h1>
+            <p>I am proficient in languages such as Golang, JavaScript, and Python. I am also familiar with front-end frameworks like Vue.js and back-end technologies like Node.js and MongoDB. I have a strong interest in health-related projects.</p>
+        </div>
+    </section>
+
+    <section class="section" style="min-height: 50vh;">
+        <div class="container">
+            <h1 class="title">Projects</h1>
+            <div class="tabs is-centered">
+                <ul>
+                    <li class="is-active" data-tab="project1"><a>Project 1</a></li>
+                    <li data-tab="project2"><a>Project 2</a></li>
+                    <li data-tab="project3"><a>Project 3</a></li>
+                </ul>
+            </div>
+           <div id="project1" class="content">
+            
+                <div class="card">
+                    <header class="card-header">
+                      <p class="card-header-title">
+                        <span>Admin</span>
+                      </p>
+                    </header>
+                    <div class="card-content">
+                      <figure class="image">
+                        <img src=.\assets\project-1.pg alt="Admin template screenshot">
+                      </figure>
+                    </div>
+                    <footer class="card-footer">
+                      <a href="templates/admin.html" class="card-footer-item">Preview</a>
+                      <a onclick="location.href='https://github.com/'" class="card-footer-item">Source
+                        Code</a>
+                    </footer>
+                  </div>
+            
+            </div>
+            <div id="project2" class="content" style="display: none;">
+                <h2 class="subtitle">Project 2: Recipe Finder</h2>
+                <p>A Python-based web application that helps users find recipes based on the ingredients they have. It uses a machine learning algorithm to suggest recipes and Node.js for the backend.</p>
+            </div>
+            <div id="project3" class="content" style="display: none;">
+                <h2 class="subtitle">Project 3: Fitness Companion</h2>
+                <p>An interactive web application developed in JavaScript that assists users in tracking their fitness goals. It integrates with various fitness devices and provides real-time updates.</p>
+            </div>
+        </div>
+    </section>
+     <!-- Contact Section -->
+     <section class="section" id="contact">
+        <div class="container">
+            <h1 class="title">Contact Me</h1>
+            <div class="columns is-multiline">
+                <div class="column is-full">
+                    <p class="section__text__p1">Get in Touch</p>
+                    <p>If you have any questions or would like to discuss a potential project, feel free to reach out to me. I'm always open to new opportunities and collaborations.</p>
+                </div>
+                <div class="column is-half">
+                    <div class="contact-info-container">
+                        <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon" />
+                        <p><a href="mailto:examplemail@gmail.com">Example@gmail.com</a></p>
+                    </div>
+                </div>
+                <div class="column is-half">
+                    <div class="contact-info-container">
+                        <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
+                        <p><a href="https://www.linkedin.com">LinkedIn</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+ 
+
+    <footer class="footer has-text-centered">
+        
+           © Sophia's Portfolio 2024 
+       
+    </footer>
+
+    <script>
+       $('.tabs ul li').click(function() {
+    var tab = $(this);
+    var content = $('#' + tab.data('tab'));
+
+    // Hide all project details
+    $('.content').not('#contact').hide();
+
+    // Show the clicked tab's content
+    content.show();
+
+    // Update the active tab
+    tab.siblings().removeClass('is-active');
+    tab.addClass('is-active');
+});
+
+
+    </script>
+</body>
+</html>
